@@ -35,8 +35,8 @@ if rad == "Home":
 
     if (option=='Visualisation'):
         st.subheader("Input Data and its Distribution")
-        data = pd.read_csv("C:/Users/JAYA/OneDrive/gold/venv/new_dataset.csv", header=0, parse_dates=True)
-        data_1 = pd.read_csv("C:/Users/JAYA/OneDrive/gold/venv/data1.csv", header=0, parse_dates=True)
+        data = pd.read_csv("new_dataset.csv", header=0, parse_dates=True)
+        data_1 = pd.read_csv("data1.csv", header=0, parse_dates=True)
         st.dataframe(data)
 
         if st.checkbox('Display Lineplot'):
@@ -60,7 +60,7 @@ if rad == "Home":
 
 
     elif (option=='Forcasting'):
-        data = pd.read_csv("C:/Users/JAYA/OneDrive/gold/venv/new_dataset.csv", header=0, parse_dates=True)
+        data = pd.read_csv("new_dataset.csv", header=0, parse_dates=True)
         v = st.number_input('Enter number of days to forcast Gold Prices', value=10)
         start_date = datetime(2021, 7, 21)
         max_days = v
